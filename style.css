@@ -1,0 +1,301 @@
+/* Dodaj te style do istniejącego pliku CSS */
+
+/* Sekcja Pricing Cards - 3 kolumny */
+.pricing-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.pricing-card {
+    background: linear-gradient(135deg, var(--bg-card), #0f2a44);
+    padding: 40px 30px;
+    border-radius: 20px;
+    border: 2px solid var(--border-color);
+    position: relative;
+    transition: transform 0.3s, border-color 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.pricing-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary);
+}
+
+.pricing-card.popular {
+    border-color: var(--primary);
+    transform: scale(1.05);
+}
+
+.pricing-card.popular:hover {
+    transform: scale(1.05) translateY(-10px);
+}
+
+.popular-badge {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(90deg, var(--primary), var(--accent));
+    color: white;
+    padding: 8px 30px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    z-index: 2;
+}
+
+.pricing-header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.pricing-header h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: var(--ice-blue);
+}
+
+.price {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: var(--primary);
+    margin-bottom: 10px;
+    line-height: 1;
+}
+
+.price span {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    font-weight: normal;
+    display: block;
+    margin-top: 5px;
+}
+
+.price-note {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-top: 10px;
+}
+
+.pricing-features {
+    list-style: none;
+    margin-bottom: 30px;
+    flex-grow: 1;
+}
+
+.pricing-features li {
+    padding: 12px 0;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.pricing-features li:last-child {
+    border-bottom: none;
+}
+
+.pricing-features li i.fa-check {
+    color: var(--primary);
+    font-size: 1.1rem;
+}
+
+.pricing-warning {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: rgba(244, 67, 54, 0.1);
+    border: 1px solid rgba(244, 67, 54, 0.3);
+    padding: 12px 15px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+}
+
+.pricing-warning i {
+    color: var(--danger);
+}
+
+.pricing-warning span {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+/* System Requirements */
+.system-requirements {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid var(--border-color);
+    margin-top: 60px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.system-requirements h3 {
+    color: var(--ice-blue);
+    margin-bottom: 25px;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.requirements-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.requirement {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s;
+}
+
+.requirement:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary);
+}
+
+.requirement i {
+    font-size: 1.5rem;
+    color: var(--primary);
+    width: 30px;
+}
+
+.requirement span {
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+/* Sekcja Opinie - placeholder */
+.reviews-placeholder {
+    text-align: center;
+    padding: 60px 40px;
+    background: linear-gradient(135deg, var(--bg-card), #0f2a44);
+    border-radius: 20px;
+    border: 2px solid var(--border-color);
+    margin-top: 30px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.placeholder-icon {
+    font-size: 4rem;
+    color: var(--primary);
+    margin-bottom: 25px;
+    opacity: 0.7;
+}
+
+.reviews-placeholder h3 {
+    font-size: 2rem;
+    color: var(--ice-blue);
+    margin-bottom: 20px;
+}
+
+.reviews-placeholder p {
+    color: var(--text-secondary);
+    margin-bottom: 30px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+.reviews-stats {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 40px 0;
+    flex-wrap: wrap;
+}
+
+.review-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    min-width: 120px;
+}
+
+.review-stat .stat-number {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--primary);
+    margin-bottom: 5px;
+}
+
+.review-stat .stat-label {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Responsywność dla 3 kolumn */
+@media (max-width: 1200px) {
+    .pricing-cards {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+}
+
+@media (max-width: 992px) {
+    .pricing-card.popular {
+        transform: none;
+    }
+    
+    .pricing-card.popular:hover {
+        transform: translateY(-10px);
+    }
+    
+    .requirements-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .pricing-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .requirements-list {
+        grid-template-columns: 1fr;
+    }
+    
+    .reviews-stats {
+        gap: 20px;
+    }
+    
+    .review-stat {
+        min-width: 100px;
+        padding: 15px;
+    }
+    
+    .review-stat .stat-number {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .price {
+        font-size: 2.8rem;
+    }
+    
+    .pricing-card {
+        padding: 30px 20px;
+    }
+}
